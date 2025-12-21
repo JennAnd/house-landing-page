@@ -1,5 +1,5 @@
 function Header() {
-  return <header></header>;
+  return <header>House</header>;
 }
 
 export default Header;
