@@ -1,6 +1,11 @@
+import heroImage from "../assets/hero.png";
+
 function Hero() {
   return (
     <section>
+      <div>
+        <img src={heroImage} alt="" />
+      </div>
       <h1>Unika hus i en unik miljö</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac erat
