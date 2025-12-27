@@ -1,8 +1,8 @@
-import Header from "../components/Header";
-import Hero from "../components/Hero";
-import TextSection from "../components/TextSection";
-import HouseSection from "../components/HouseSection";
-import Footer from "../components/Footer";
+import Header from "../components/Header/Header";
+import Hero from "../components/Hero/Hero";
+import TextSection from "../components/TextSection/TextSection";
+import HouseSection from "../components/HouseSection/HouseSection";
+import Footer from "../components/Footer/Footer";
 
 function Home() {
   return (

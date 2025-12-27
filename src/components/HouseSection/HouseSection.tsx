@@ -1,6 +1,6 @@
 import HouseCard from "./HouseCard";
-import houseImage from "../assets/house-1.png";
-import optionsImage from "../assets/house-2.png";
+import houseImage from "../../assets/house-1.png";
+import optionsImage from "../../assets/house-2.png";
 
 function HouseSection() {
   return (
