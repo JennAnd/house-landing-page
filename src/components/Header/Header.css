@@ -1,0 +1,28 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  z-index: 10;
+  color: #fff;
+}
+
+.header > div {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.header button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.header img {
+  display: block;
+}

@@ -1,8 +1,9 @@
 import menuIcon from "../../assets/menu.svg";
+import "./Header.css";
 
 function Header() {
   return (
-    <header>
+    <header className="header">
       <div>House</div>
       <nav>
         <button aria-label="Menu">
