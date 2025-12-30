@@ -18,14 +18,6 @@
   object-position: 60% 50%;
 }
 
-/* Dark overlay for readability */
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.35);
-}
-
 /* Text block on top of image */
 .hero-content {
   position: absolute;
