@@ -4,9 +4,9 @@ import "./Header.css";
 function Header() {
   return (
     <header className="header">
-      <div>House</div>
+      <div className="header-logo">House</div>
       <nav>
-        <button aria-label="Menu">
+        <button className="header-menu" aria-label="Menu">
           <img src={menuIcon} alt="" />
         </button>
       </nav>

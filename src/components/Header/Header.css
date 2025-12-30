@@ -1,28 +1,39 @@
+/* HEADER */
+
+/* Overlay header on top of the hero image */
 .header {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   padding: 1rem;
   z-index: 10;
-  color: #fff;
+  color: var(--c-text-white);
 }
 
-.header > div {
-  font-size: 1.25rem;
-  font-weight: 500;
+/* Logo text */
+.header-logo {
+  font-family: var(--font-sans);
+  font-size: 1.8rem;
+  line-height: 1;
+  font-weight: 300;
+  letter-spacing: 0.04em;
 }
 
-.header button {
+/* Menu button (icon only) */
+.header-menu {
   background: none;
   border: none;
-  padding: 0;
+  padding: 0.5rem;
   cursor: pointer;
+  color: inherit;
 }
 
-.header img {
+.header-menu img {
   display: block;
+  width: 24px;
+  height: 24px;
 }
