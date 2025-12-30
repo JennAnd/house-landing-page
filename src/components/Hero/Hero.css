@@ -1,14 +1,24 @@
+/* HERO */
+
 .hero {
   position: relative;
-  color: #fff;
+  color: var(--c-text-white);
+  min-height: 420px;
+  overflow: hidden;
 }
 
+/* Background image fills section */
 .hero img {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  object-position: 60% 50%;
 }
 
+/* Dark overlay for readability */
 .hero::after {
   content: "";
   position: absolute;
@@ -16,29 +26,115 @@
   background: rgba(0, 0, 0, 0.35);
 }
 
+/* Text block on top of image */
 .hero-content {
   position: absolute;
   right: 1rem;
   bottom: 1.5rem;
-  max-width: 90%;
+
+  /* Keeps text readable while resizing */
+  max-width: min(32ch, 90%);
+
   z-index: 1;
 }
 
+/* Text*/
 .hero h1 {
-  font-size: 1.75rem;
-  line-height: 1.2;
-  margin-bottom: 0.75rem;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: clamp(1.45rem, 5.6vw, 1.75rem);
+  line-height: 1.4;
+  margin: 0 0 0.75rem;
+  max-width: 18ch;
 }
 
 .hero p {
-  font-size: 0.95rem;
+  font-family: var(--font-sans);
+  font-size: clamp(0.9rem, 3.4vw, 0.95rem);
+  font-weight: 300;
   line-height: 1.5;
-  margin-bottom: 1.25rem;
+  margin: 0 0 1.1rem;
 }
 
+/* Button */
 .hero button {
-  padding: 0.75rem 1.25rem;
-  border: 1px solid #fff;
-  color: #fff;
-  font-size: 0.9rem;
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  color: var(--c-text-white);
+  background: var(--c-text-dark);
+
+  height: 40px;
+  padding: 0 1.6rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  --corner: 10px;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - var(--corner)),
+    calc(100% - var(--corner)) 100%,
+    0 100%
+  );
+}
+
+.hero button:focus-visible {
+  outline: 2px solid var(--c-text-white);
+  outline-offset: 3px;
+}
+
+/* TABLET */
+@media (min-width: 600px) {
+  .hero {
+    min-height: 560px;
+  }
+
+  .hero-content {
+    right: clamp(1rem, 5vw, 2.5rem);
+    bottom: clamp(1.25rem, 4vw, 3rem);
+    max-width: clamp(28ch, 32vw, 45ch);
+  }
+
+  .hero h1 {
+    max-width: 280px;
+  }
+
+  .hero-button {
+    width: 126px;
+    height: 40px;
+    padding: 0;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+  .hero {
+    min-height: 697px;
+  }
+
+  .hero img {
+    object-position: 50% 50%;
+  }
+
+  .hero-content {
+    top: 213px;
+    right: clamp(100px, 10vw, 218px);
+    bottom: auto;
+    max-width: 398px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero p {
+    font-size: 18px;
+    line-height: 26px;
+  }
 }
