@@ -1,12 +1,14 @@
+import "./TextSection.css";
+
 function TextSection() {
   return (
-    <section>
-      <h2>Lorem ipsum dolor</h2>
-      <p>
+    <section className="text-section">
+      <h2 className="text-section-title">Lorem ipsum dolor</h2>
+      <p className="text-section-intro">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac erat
         tempor, fringilla nunc vitae, laoreet velit. Suspendisse eu odio.
       </p>
-      <p>
+      <p className="text-section-body">
         dapibus molestie nec quis ipsum. Pellentesque pretium finibus vulputate.
         Praesent et urna ultricies, varius ipsum eget, iaculis ante.
         Pellentesque quis mi tempus elit lobortis cursus. Etiam vel sollicitudin

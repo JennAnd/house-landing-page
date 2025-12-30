@@ -1,0 +1,25 @@
+.text-section {
+  background: #2b2b2b;
+  color: #fff;
+  padding: 3rem 1.5rem;
+}
+
+.text-section-title {
+  font-size: 1.75rem;
+  line-height: 1.2;
+  margin: 0 0 1rem;
+}
+
+.text-section-intro {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin: 0 0 1.25rem;
+  max-width: 65ch;
+}
+
+.text-section-body {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin: 0;
+  max-width: 75ch;
+}
