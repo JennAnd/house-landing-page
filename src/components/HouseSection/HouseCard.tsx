@@ -1,3 +1,5 @@
+import "./HouseCard.css";
+
 type HouseCardProps = {
   title: string;
   buttonText: string;
@@ -6,11 +8,11 @@ type HouseCardProps = {
 
 function HouseCard({ title, buttonText, image }: HouseCardProps) {
   return (
-    <div>
-      <img src={image} alt="" />
-      <h3>{title}</h3>
-      <button>{buttonText}</button>
-    </div>
+    <article className="house-card">
+      <img className="house-card-image" src={image} alt="" />
+      <h3 className="house-card-title">{title}</h3>
+      <button className="house-card-button">{buttonText}</button>
+    </article>
   );
 }
 

@@ -1,0 +1,8 @@
+.house-section {
+  padding: 0;
+}
+
+.house-section-grid {
+  display: grid;
+  gap: 0;
+}

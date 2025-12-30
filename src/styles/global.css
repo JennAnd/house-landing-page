@@ -1,5 +1,17 @@
 /* ----- Global styles -----*/
 
+:root {
+  /* Text */
+  --c-text-white: #ffffff;
+  --c-text-dark: #1e1e1e;
+  --c-text-footer-logo: #1a1a1a;
+
+  /* Background */
+  --c-bg-text-section: #2b2b2b;
+  --c-bg-white: #ffffff;
+  --c-bg-footer: #101010;
+}
+
 *,
 *::before,
 *::after {
