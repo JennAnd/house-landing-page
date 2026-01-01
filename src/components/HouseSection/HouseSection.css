@@ -1,8 +1,22 @@
+/* HOUSESECTION */
+
+/* Section wrapper */
 .house-section {
   padding: 0;
 }
 
+/* Stack cards vertically */
 .house-section-grid {
   display: grid;
+  grid-template-columns: 1fr;
   gap: 0;
+  width: 100%;
+}
+
+/* TABLET */
+@media (min-width: 768px) {
+  /* Show card side by side */
+  .house-section-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
