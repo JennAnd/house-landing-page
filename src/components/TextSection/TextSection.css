@@ -1,25 +1,152 @@
 .text-section {
-  background: #2b2b2b;
-  color: #fff;
+  background: var(--c-bg-text-section);
+  color: var(--c-text-white);
   padding: 3rem 1.5rem;
 }
 
+.text-section-inner {
+  max-width: 954px;
+  margin: 0 auto;
+}
+
+/* Stack content vertically on mobile */
+.text-section-grid {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 .text-section-title {
-  font-size: 1.75rem;
-  line-height: 1.2;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 1.875rem;
+  line-height: 1.1;
   margin: 0 0 1rem;
 }
 
 .text-section-intro {
-  font-size: 1.125rem;
-  line-height: 1.6;
-  margin: 0 0 1.25rem;
-  max-width: 65ch;
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 26px;
+  margin: 0 0 1rem;
+  max-width: 100%;
+  text-align: justify;
+  text-align-last: left;
+}
+
+/* Keep correct reading order when stacked */
+.text-section-left {
+  order: 3;
+  margin-top: 0;
+}
+
+.text-section-right {
+  order: 4;
+  margin-top: 16px;
 }
 
 .text-section-body {
-  font-size: 0.95rem;
-  line-height: 1.7;
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 22px;
   margin: 0;
-  max-width: 75ch;
+  text-align: justify;
+  text-align-last: left;
+}
+
+/* TABLET */
+@media (min-width: 768px) {
+  .text-section {
+    padding: 3rem 2rem;
+  }
+
+  /* Switch to a two-column grid */
+  .text-section-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 32px;
+    row-gap: 0;
+    align-items: start;
+    max-width: none;
+    margin: 0;
+
+    /* Places the right column next to the intro line */
+    grid-template-areas:
+      "title  ."
+      "intro  right"
+      "left   right";
+  }
+
+  .text-section-title {
+    grid-area: title;
+  }
+
+  .text-section-intro {
+    grid-area: intro;
+    max-width: 100%;
+    margin-bottom: 0;
+  }
+
+  .text-section-left {
+    grid-area: left;
+    margin-top: 24px;
+  }
+
+  .text-section-right {
+    grid-area: right;
+    margin-top: 0;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+  /* Matches the desktop design height */
+  .text-section {
+    padding: 60.5px 1.5rem;
+  }
+
+  .text-section-grid {
+    display: grid;
+    grid-template-columns: 450px 450px;
+    column-gap: 54px;
+    row-gap: 0;
+    align-items: start;
+
+    grid-template-areas:
+      "title  ."
+      "intro  right"
+      "left   right";
+  }
+
+  .text-section-title {
+    grid-area: title;
+    font-size: 34px;
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+
+  .text-section-intro {
+    grid-area: intro;
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 0;
+    max-width: 450px;
+  }
+
+  .text-section-left {
+    grid-area: left;
+    margin-top: 24px;
+  }
+
+  .text-section-right {
+    grid-area: right;
+  }
+
+  .text-section-body {
+    font-size: 15px;
+    line-height: 24px;
+  }
 }
