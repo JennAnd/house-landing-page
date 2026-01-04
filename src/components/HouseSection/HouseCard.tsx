@@ -11,7 +11,9 @@ function HouseCard({ title, buttonText, image }: HouseCardProps) {
     <article className="house-card">
       <img className="house-card-image" src={image} alt="" />
       <h3 className="house-card-title">{title}</h3>
-      <button className="house-card-button">{buttonText}</button>
+      <button type="button" className="house-card-button">
+        {buttonText}
+      </button>
     </article>
   );
 }
