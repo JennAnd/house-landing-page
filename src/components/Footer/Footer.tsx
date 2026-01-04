@@ -6,13 +6,25 @@ function Footer() {
     <footer className="footer">
       <div className="footer-inner">
         <nav className="footer-nav" aria-label="Footer">
-          <a className="footer-link" href="#">
+          <a
+            className="footer-link"
+            href="/"
+            onClick={(e) => e.preventDefault()}
+          >
             Våra hus
           </a>
-          <a className="footer-link" href="#">
+          <a
+            className="footer-link"
+            href="/"
+            onClick={(e) => e.preventDefault()}
+          >
             Tillval
           </a>
-          <a className="footer-link" href="#">
+          <a
+            className="footer-link"
+            href="/"
+            onClick={(e) => e.preventDefault()}
+          >
             Hållbarhet
           </a>
         </nav>
