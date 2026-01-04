@@ -1,60 +1,53 @@
 /* HERO */
 
 .hero {
-  position: relative;
   color: var(--c-text-white);
-  min-height: 420px;
-  overflow: hidden;
+  background: #111;
 }
 
 /* Background image fills section */
-.hero img {
+.hero-image {
   width: 100%;
-  height: 100%;
-  display: block;
-  position: absolute;
-  inset: 0;
+  height: 45vh;
   object-fit: cover;
-  object-position: 60% 50%;
+  display: block;
+  object-position: left center; /* Prioritise the house */
 }
 
 /* Text block on top of image */
 .hero-content {
-  position: absolute;
-  right: 1rem;
-  bottom: 1.5rem;
-
-  /* Keeps text readable while resizing */
-  max-width: min(32ch, 90%);
-
-  z-index: 1;
+  padding: 1.25rem 1rem;
+  background: #111;
+  max-width: 32rem;
 }
 
-/* Text*/
-.hero h1 {
+/* Title*/
+.hero-title {
   font-family: var(--font-mono);
   font-weight: 500;
-  font-size: clamp(1.45rem, 5.6vw, 1.75rem);
+  font-size: 1.9rem;
   line-height: 1.4;
   margin: 0 0 0.75rem;
   max-width: 18ch;
 }
 
-.hero p {
+/* Text*/
+.hero-text {
   font-family: var(--font-sans);
-  font-size: clamp(0.9rem, 3.4vw, 0.95rem);
   font-weight: 300;
+  font-size: 0.95rem;
   line-height: 1.5;
   margin: 0 0 1.1rem;
 }
 
 /* Button */
-.hero button {
+.hero-button {
   font-family: var(--font-sans);
   font-weight: 400;
   font-size: 15px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+
   border: none;
   cursor: pointer;
   color: var(--c-text-white);
@@ -62,6 +55,7 @@
 
   height: 40px;
   padding: 0 1.6rem;
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -82,50 +76,83 @@
 }
 
 /* TABLET */
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   .hero {
-    min-height: 560px;
+    min-height: 60vh;
   }
 
   .hero-content {
-    right: clamp(1rem, 5vw, 2.5rem);
-    bottom: clamp(1.25rem, 4vw, 3rem);
-    max-width: clamp(28ch, 32vw, 45ch);
+    right: 1.6rem;
+    bottom: 3rem;
+    max-width: 44rem;
   }
 
-  .hero h1 {
-    max-width: 280px;
+  .hero-title {
+    font-size: 1.9rem;
+    max-width: none;
   }
 
-  .hero-button {
-    width: 126px;
-    height: 40px;
-    padding: 0;
+  .hero-text {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .hero {
+    position: relative;
+    height: 75vh;
+    background: none;
+    overflow: hidden;
+  }
+  .hero-content {
+    position: absolute;
+    top: 160px;
+    right: 5vw;
+    bottom: 3rem;
+    max-width: 360px;
+    background: transparent;
+    margin: 0;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 
 /* DESKTOP */
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   .hero {
-    min-height: 697px;
-  }
-
-  .hero img {
-    object-position: 50% 50%;
+    height: 95vh;
+    height: 95vh;
+    background: none;
+    overflow: hidden;
   }
 
   .hero-content {
-    top: 213px;
-    right: clamp(100px, 10vw, 218px);
+    position: absolute;
+    top: 168px;
+    right: clamp(110px, 6vw, 218px);
+    background: none;
     bottom: auto;
     max-width: 398px;
+    margin: 0;
   }
 
-  .hero h1 {
+  .hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 95vh;
+    object-fit: cover;
+  }
+
+  .hero-title {
     font-size: 34px;
   }
 
-  .hero p {
+  .hero-text {
     font-size: 18px;
     line-height: 26px;
   }
