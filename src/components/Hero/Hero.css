@@ -2,7 +2,7 @@
 
 .hero {
   color: var(--c-text-white);
-  background: #111;
+  background: var(--c-text-footer-logo);
 }
 
 /* Background image fills section */
@@ -18,7 +18,7 @@
 .hero-content {
   padding: 1.25rem 1.25rem;
   padding-bottom: 1.75rem;
-  background: #111;
+  background: var(--c-text-footer-logo);
   max-width: 32rem;
 }
 
@@ -116,8 +116,8 @@
 
   .hero-content {
     position: absolute;
-    top: 160px;
-    right: 5vw;
+    top: 140px;
+    right: 3vw;
     bottom: 3rem;
     max-width: 360px;
     background: transparent;
@@ -152,8 +152,8 @@
 
   .hero-content {
     position: absolute;
-    top: 168px;
-    right: clamp(110px, 6vw, 218px);
+    top: 180px;
+    right: 7.8vw;
     background: none;
     bottom: auto;
     max-width: 398px;
