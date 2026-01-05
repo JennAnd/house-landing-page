@@ -24,6 +24,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  padding-bottom: 1.8rem;
 }
 
 .footer-link {
@@ -111,6 +112,7 @@
 
   .footer-nav {
     grid-column: 1;
+    padding-bottom: 0;
   }
 
   .footer-copy {
