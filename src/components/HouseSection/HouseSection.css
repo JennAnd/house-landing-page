@@ -1,15 +1,15 @@
-/* HOUSESECTION */
+/* HOUSE SECTION */
 
 /* Section wrapper */
 .house-section {
-  padding: 0;
+  background: var(--c-bg-footer);
+  width: 100%;
 }
 
-/* Stack cards vertically */
+/* Cards layout */
 .house-section-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 0;
   width: 100%;
 }
 

@@ -1,4 +1,4 @@
-/* HOUSECARD*/
+/* HOUSE CARD*/
 
 .house-card {
   position: relative;
@@ -7,31 +7,39 @@
 
 /* Card image */
 .house-card-image {
+  position: relative;
+  z-index: 1;
   width: 100%;
   height: 320px;
   object-fit: cover;
-  object-position: 50% 50%;
   display: block;
+}
+
+.house-card-title,
+.house-card-button {
+  position: absolute;
+  z-index: 2;
 }
 
 /* Title */
 .house-card-title {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
+  top: 24px;
+  left: 24px;
+
   margin: 0;
+
   color: var(--c-text-white);
   font-family: var(--font-mono);
   font-weight: 500;
-  font-size: 1.25rem;
-  line-height: 1.2;
+  font-size: 24px;
+  line-height: 1;
 }
 
 /* Button */
 .house-card-button {
   position: absolute;
-  right: 1rem;
-  bottom: 1rem;
+  right: 16px;
+  bottom: 16px;
 
   font-family: var(--font-sans);
   font-weight: 400;
@@ -45,7 +53,7 @@
   background: var(--c-bg-white);
   color: var(--c-text-dark);
   transition: background-color 0.2s ease, color 0.2s ease,
-    border-color 0.2s ease, transform 0.2s ease;
+    border-color 0.2s ease, transform 0.15s ease;
 
   height: 40px;
   padding: 0 1.6rem;
@@ -78,33 +86,25 @@
 }
 
 /* TABLET */
-@media (min-width: 768px) and (max-width: 1114px) {
-  /* Background split to blend into the sections */
-  .house-card {
-    background: linear-gradient(
-      to bottom,
-      var(--c-bg-text-section) 0%,
-      var(--c-bg-text-section) 55%,
-      var(--c-bg-footer) 55%,
-      var(--c-bg-footer) 100%
-    );
-  }
-
+@media (min-width: 768px) {
   .house-card-image {
     height: 360px;
-    object-fit: contain;
-    object-position: center;
-    background: transparent;
-  }
-
-  .house-card-title {
-    top: clamp(22px, calc(68.8px - (100vw - 768px) * 0.13526), 68.8px);
-    left: clamp(20.8px, calc(20.8px + (100vw - 768px) * 0.03237), 32px);
   }
 
   .house-card-button {
-    right: clamp(16px, calc(16px + (100vw - 768px) * 0.04638), 32px);
-    bottom: clamp(32px, calc(64px - (100vw - 768px) * 0.09275), 64px);
+    right: 24px;
+    bottom: 24px;
+  }
+}
+
+/* TABLET  -  Image focus fix between (768-880) */
+@media (min-width: 768px) and (max-width: 880px) {
+  .house-card:first-child .house-card-image {
+    object-position: 64% center;
+  }
+
+  .house-card:last-child .house-card-image {
+    object-position: 40% center;
   }
 }
 
@@ -112,18 +112,19 @@
 @media (min-width: 1115px) {
   .house-card-image {
     height: 464px;
-    object-fit: cover;
-    object-position: 50% 50%;
   }
 
   .house-card-title {
-    top: 22px;
+    top: 32px;
     left: 32px;
-    font-size: 1.5rem;
+    font-size: 24px;
   }
 
   .house-card-button {
+    width: 126px;
+    height: 40px;
     right: 32px;
     bottom: 32px;
+    padding: 0;
   }
 }
