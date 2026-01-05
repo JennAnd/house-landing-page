@@ -44,6 +44,8 @@
 
   background: var(--c-bg-white);
   color: var(--c-text-dark);
+  transition: background-color 0.2s ease, color 0.2s ease,
+    border-color 0.2s ease, transform 0.2s ease;
 
   height: 40px;
   padding: 0 1.6rem;
@@ -61,6 +63,12 @@
     calc(100% - var(--corner)) 100%,
     0 100%
   );
+}
+
+.house-card-button:hover {
+  background: var(--c-text-dark);
+  color: var(--c-text-white);
+  transform: translateY(-1px);
 }
 
 /* Focus outline for keyboard navigation */
