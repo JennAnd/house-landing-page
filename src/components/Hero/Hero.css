@@ -16,7 +16,8 @@
 
 /* Text block on top of image */
 .hero-content {
-  padding: 1.25rem 1rem;
+  padding: 1.25rem 1.25rem;
+  padding-bottom: 1.75rem;
   background: #111;
   max-width: 32rem;
 }
@@ -91,8 +92,7 @@
   }
 
   .hero-content {
-    right: 1.6rem;
-    bottom: 3rem;
+    padding-left: 2rem;
     max-width: 44rem;
   }
 
