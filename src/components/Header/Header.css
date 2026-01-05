@@ -3,38 +3,44 @@
 /* Overlay header on top of the hero image */
 .header {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 0;
+  top: 16px;
+  left: clamp(16px, 4vw, 32px);
+  right: clamp(16px, 4vw, 32px);
   z-index: 10;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   color: var(--c-text-white);
 }
 
-/* Logo SVG */
+/* Logo container */
 .header-logo {
-  position: absolute;
-  top: 32px;
-  left: 32px;
   width: 110px;
-  height: 34px;
+}
+
+/* Navigation wrapper */
+.header-nav {
+  display: flex;
+  align-items: center;
 }
 
 /* Menu button */
 .header-menu {
-  position: absolute;
   background: none;
   border: none;
-  top: 28px;
-  right: 30px;
+
   width: 40px;
   height: 40px;
-  cursor: pointer;
+
   display: flex;
   align-items: center;
   justify-content: center;
 
-  transition: background-color 0.2s ease, transform 0.15s ease;
+  cursor: pointer;
+
+  transition: transform 0.15s ease;
 }
 
 .header-menu:hover {
@@ -55,6 +61,21 @@
 
 /* TABLET */
 @media (min-width: 768px) {
+  .header {
+    top: 24px;
+  }
+
+  .header-logo {
+    width: 128px;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+  .header {
+    top: 32px;
+  }
+
   .header-logo {
     width: 128px;
   }
