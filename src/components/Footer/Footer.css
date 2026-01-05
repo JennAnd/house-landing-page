@@ -13,7 +13,9 @@
   z-index: 1;
   width: 100%;
   margin: 0 auto;
+
   padding: 2rem 1.25rem clamp(8rem, 22vw, 12rem);
+
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -56,9 +58,11 @@
   left: 50%;
   bottom: 0;
   z-index: 0;
+
   width: calc(100% - 2.5rem);
   transform: translateX(-50%);
   text-align: center;
+
   pointer-events: none;
   user-select: none;
   white-space: nowrap;
@@ -78,6 +82,7 @@
     grid-template-columns: 220px 1fr;
     column-gap: 1.5rem;
     align-items: start;
+    padding-top: 3rem;
   }
 
   .footer-copy {
@@ -85,13 +90,6 @@
     max-width: 245px;
     font-size: 15px;
     line-height: 25px;
-  }
-}
-
-/* Reduce top spacing */
-@media (min-width: 768px) and (max-width: 900px) {
-  .footer-inner {
-    padding-top: 0.5rem;
   }
 }
 
@@ -126,6 +124,5 @@
   .footer-logo {
     width: calc(100% - 64px);
     bottom: 0;
-    transform: translateX(-50%);
   }
 }
